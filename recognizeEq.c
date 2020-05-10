@@ -3,11 +3,11 @@
 /*version: 2.0*/
 /*Description: Solve equation in given input*/
 
-#include <stdio.h>  /* getchar, printf */
-#include <stdlib.h> /* NULL */
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "scanner.h"
-//#include "scanner.c"
+#include "scanner.c"
 #include "recognizeEq.h"
 
 
@@ -43,16 +43,10 @@ int acceptEquation(List *lp) {
       return 0;
     }
   while((*lp) != NULL){
-    /*if(!acceptSymbol(lp)){
-      return 0;
-    }*/
 
     //Cant have two consecutive numbers
     if(acceptNumber(lp)) {
         symb=0;
-        /*if(acceptNumber(lp)){
-          return 0;
-        }*/
     }
 
     if(acceptIdentifier(lp)) {
